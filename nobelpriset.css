@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+  background-image: url(bi.jpg);
+	
+}
+
+#storbox {
+    width:  80%;
+    height: 100%;
+    position: absolute;
+    margin-left: 10%;
+}
+
+header {
+    height: 10.2%;
+    width: 80%;
+    margin-left: 0%;
+    margin-top: 0;
+    margin-bottom: 0%;
+    background-color: #FFD700;
+    text-align: center;
+    font-size: 60px;
+    position: fixed;
+}
+
+h1 {
+	text-align: center;
+    font-size: 55px;
+	margin-top: 0;
+	font-family:"Comic Sans MS";
+}
+	
+nav {
+    height: 90%;
+    width: 16%;
+    margin-top: 5.75%;
+    background-color: #fff;
+    float: left;
+    position: fixed;
+}
+
+article {
+    height: fit-content;
+    width: 60%;
+    margin-top: 6%;
+    margin-left: 20%;
+    margin-bottom: 0;
+    background-color: #fff;
+    float: left;
+}
+
+article p {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 12pt;
+}
+
+#full-screen {
+    width: 60%;
+    margin-left: 20%;
+    height: 91.5%;
+}
+
+aside {
+    width: 16%;
+    height: 100%;
+    float: right;
+    margin-left: 64%;
+    margin-top: 5.75%;
+    position: fixed;
+    background-color: #FFF;
+}
+
+h2 {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 55%;
+    background-color: #FFF;
+    padding: 20px 0px 0px 0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    
+}
+
+.h2-start {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 55%;
+    background-color: #FFF;
+  	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    
+}
+
+#textsource {
+    font-size: 8pt;
+    padding-top: 5%;
+}
+
+#nav-header {
+   margin:  0px; 
+   padding: 5px;
+   background-color: #f8f8f8;
+}
+
+#nav-header a {
+    color: #000;
+    text-decoration: none;
+}
+
+#list-header {
+   margin: 0; 
+   padding: 5px;
+   margin-bottom: 10px;
+   font-family: 'Tahoma';
+   background-color: #f8f8f8;
+   color: #888888;
+}
+
+.list-item {
+   margin-left:  0px;
+   margin-right:  0px; 
+   padding: 5px;
+}
+
+.list-item:hover {
+    background-color: #f0f0f0;
+}
+
+.list-item a {
+    color: #888888;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+#facts {
+    width: 40%;
+    margin-left: 60%;
+}
+
+h3 {
+    text-decoration: underline;
+	font-weight: bold;	
+	
+}
+
+table,tr,td {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+
+figure {
+	float: left;	
+}
+
+figcaption {
+	font-size:12px;
+}
+
+
