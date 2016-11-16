@@ -1,7 +1,6 @@
 body {
     margin: 0;
-  background-image: url(bi.jpg);
-background-position: 100% 100%;
+  background-image: url(bi.jpg) no-repeat center center fixed;
 }
 
 #storbox {
