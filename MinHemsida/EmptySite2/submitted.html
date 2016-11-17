@@ -1,0 +1,35 @@
+function submitted1() {
+    var FirstName = document.forms["Contact"]["FirstName"].value;
+    var LastName = document.forms["Contact"]["LastName"].value;
+    
+    if (FirstName == null || FirstName == "" || LastName == null || LastName == "") {
+        document.getElementById("text_error_fullname").innerHTML = "Full Name Is Required";
+        document.getElementById("submitted_top_error").innerHTML = "Your Message Has Encountered A Problem";
+        document.getElementById("submitted_bottom_error").innerHTML = "Your Message Has Encountered A Problem";
+        return false
+        }
+}
+
+function submitted2() {
+var Email = document.forms["Contact"]["Email"].value;
+     if (Email == nul || Email == ""){
+        document.getElementById("text_error_email").innerHTML = "Email Is Required";
+        document.getElementById("text_error_fullname").innerHTML = "Full Name Is Required";
+        document.getElementById("submitted_top_error").innerHTML = "Your Message Has Encountered A Problem";
+        document.getElementById("submitted_bottom_error").innerHTML = "Your Message Has Encountered A Problem";
+        return false
+        }
+}
+    
+function submitted3(){
+var Message = document.forms["Contact"]["Message"].value;
+
+    if (Message == null || Message == "") {
+        document.getElementById("text_error_message").innerHTML = "Message Is Required";
+        document.getElementById("submitted_top_error").innerHTML = "Your Message Has Encountered A Problem";
+        document.getElementById("submitted_bottom_error").innerHTML = "Your Message Has Encountered A Problem";
+        return false
+        }
+}
+
+    

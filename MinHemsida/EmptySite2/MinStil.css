@@ -1,0 +1,565 @@
+/* Applies to every page (start)*/
+
+body {
+    background-color: #fff;
+}
+
+#MegaBox {
+    background-color: #fff;
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    position: absolute;
+}
+
+header {
+    background-color: #fff;
+    text-align: center;
+    height: 25%;
+    margin-top: 2%;
+}
+
+nav {
+    background-color: #fff;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+.dropdown {
+    display: none;
+}
+
+ul {
+    margin-top: 20px; 
+}
+
+li {
+    display: inline;
+    padding: 0px 20px 0px 20px; 
+    width: 100%;
+}
+
+a {
+    font-family: '3ds';
+    font-size: 30px;
+    text-decoration: none;
+    color: #888888;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+article {
+    width: 90%;
+    margin-left: 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+p {
+    font-family: '3ds';
+    font-size: 20px;
+    text-decoration: none;
+    color: #888888;
+}
+
+#Button {
+    background-color: white;
+    width: 100px;
+    height: 45px;
+    border: 1px solid #888888;
+    padding: 10px;
+    margin: 25px;
+    text-align:center;
+    font-size: 20px;
+    font-family: '3ds';
+    color: #888888;
+    clear: left;
+}
+
+#Button:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 10px 10px 5px #888888;
+    cursor: pointer;
+}
+
+/* Applies to every page (end)*/
+
+
+
+/* Applies only to start.html (start)*/
+
+#bild1 {
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* Applies only to start.html (end)*/
+
+
+
+/* Applies only to social_media.html (start)*/
+
+#videos {
+    float: right;
+    height: max-content;
+    width: 100%;
+}
+
+.sidebar-left {
+    float: left;
+    width: 50%;
+    height: 550px;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+.sidebar-right {
+    float: right;
+    width: 50%;
+    margin-bottom: 3%;
+}
+
+.social_media_list {
+    text-align: center; 
+}
+
+.social_media {
+    text-align: left;
+    font-family: '3ds';
+    font-size: 25px;
+    color: #888888;
+}
+
+.twitter-follow-button {
+    text-align: left;
+}
+
+/* Applies only to social_media.html (end)*/
+
+
+
+/* Applies only to bio.html (start)*/
+
+.bio {
+    text-align: center;
+    color: #888888;
+}
+
+/* Applies only to bio.html (end) */
+
+
+/* Applies only to contact-html (start) */
+
+#contact {
+    text-align: left;    color: #888888;
+    float: left;
+}
+
+input {
+    clear: left;
+    margin-right: 50px;
+    background-color: rgb(240,240,240);
+    height: 15px;
+    width: 100px;
+    font-family: '3ds';
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #888888;
+}
+
+.hej {
+    float: left;
+}
+
+.text_message {
+    font-size: 14px;
+}
+
+.Contact {
+    float: left;
+    width: 40%;
+    margin-right: 5%;
+}
+
+.Message {
+    float: left;
+    background-color: #fff;
+    width: 55%
+}
+
+textarea {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(240,240,240);
+    height: 120px;
+    width: 300px;
+    font-family: '3ds';   
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #888888;
+    resize: vertical;
+    max-height: 240px;
+}
+
+input:focus {
+    background-color: #fff;
+}
+
+textarea:focus {
+    background-color: #fff;
+}
+
+
+#charNum {
+    float: left;
+}
+
+#text_error_fullname {
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+}
+
+#text_error_email {
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    width: fit-content;
+}
+
+#text_error_message {
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    width: fit-content;
+}
+
+#submitted_top_error {
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    width: fit-content;
+}
+
+#submitted_bottom_error {
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    width: fit-content;
+}
+
+
+/* Applies only to contact.html (end) */
+
+ /* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #MegaBox {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    position: absolute;
+}
+
+nav {
+    width: 100%;
+     margin-left: 0px;
+}
+
+article {
+    width: 100%;
+    margin-left: 0px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#bild1 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.menu {
+    display: none;
+}
+
+.dropbtn {
+    background-color: #FFF;
+    color: grey;
+    padding: 16px;
+    border: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    text-align:center;
+}
+            
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #000;
+    color: #FFF;
+}
+            
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1% 1%;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+            }
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-width: 320px) and (max-width: 568px) {
+    #MegaBox {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    position: absolute;
+}
+
+nav {
+    width: 100%;
+     margin-left: 0px;
+}
+
+article {
+    width: 100%;
+    margin-left: 0px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#bild1 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.menu {
+    display: none;
+}
+
+.dropbtn {
+    background-color: #FFF;
+    color: grey;
+    padding: 16px;
+    border: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    text-align:center;
+}
+            
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #000;
+    color: #FFF;
+}
+            
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1% 1%;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+            }
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    #MegaBox {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    position: absolute;
+}
+
+nav {
+    width: 100%;
+     margin-left: 0px;
+}
+
+article {
+    width: 100%;
+    margin-left: 0px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#bild1 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+nav ul {
+    display: none;
+}
+
+.dropbtn {
+    background-color: #FFF;
+    color: grey;
+    padding: 16px;
+    border: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    text-align:center;
+}
+            
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #000;
+    color: #FFF;
+}
+            
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-width: 414px) and (max-width: 736px) {
+                #MegaBox {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    position: absolute;
+}
+
+nav {
+    width: 100%;
+     margin-left: 0px;
+}
+
+article {
+    width: 100%;
+    margin-left: 0px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#bild1 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+ul {
+    display: none;
+}
+
+.dropbtn {
+    background-color: #FFF;
+    color: grey;
+    padding: 16px;
+    border: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    text-align:center;
+}
+            
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #000;
+    color: #FFF;
+}
+            
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+            }
