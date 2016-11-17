@@ -1,5 +1,4 @@
-
-<body {
+body {
     margin: 0;
   background-color: #F0F0F0;
 }
@@ -48,7 +47,7 @@ article {
     margin-bottom: 0;
     background-color: #fff;
     float: left;
-	z-index: 1;
+	
 }
 
 article p {
