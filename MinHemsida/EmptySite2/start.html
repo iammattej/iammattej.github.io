@@ -4,102 +4,65 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Contact - Matte J</title>
+        <title>Matte J</title>
         <link href="MinStil.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="Bilder_Min_Nya_Hemsida/NyaMatteJ-logga1.png" />
-        <script src="http://code.jquery.com/jquery-1.5.js"></script>
         <script src="MyJavaScript.js"></script>
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+           
+        
     </head>
     <body>
+
         <div id="MegaBox">
 
            <header>
                 <a href="start.html"><img src="Bilder_Min_Nya_Hemsida/NyaMatteJ-logga.png" Alt="Matte J-Logo" height="100%"></a>
            </header>
-            
 
 
-             <nav>
+
+            <nav>
                 <div class="menu">
                     <ul class="menu-list">
-                        <li><a href="start.html">Home</a></li>
+                        <li><a href="start.html" style="color: #000;">Home</a></li>
                         <li><a href="social_media.html">Social Media</a></li>
                         <li><a href="bio.html">Bio</a></li>
-                        <li><a href="contact.html"style="color: #000;">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
-                 <div class="dropdown">
+                <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="start.html">Home</a>
-                        <a href="social_media.html">Social Media</a>
+                        <a href="social_media.html">Social Media</a>    
                         <a href="bio.html">Bio</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </div>
             </nav>
 
-            <article id="contact">
-         
-                <div class="Contact">
-                    <h1>Contact</h1>
-                    <div><p style="margin-bottom: 5%;">Email: </p><a id="Email" href="mailto:MatteJ.Contact@gmail.com">MatteJ.Contact@gmail.com</a></div>
-                    <p id="Email_Info1">Feel free to send me a message by writing to the right or 
-                       by sending me an email to my gmail above</p>
-                    <p id="Email_Info2">Feel free to send me a message by writing in the form below or 
-                       by sending me an email to my gmail above</p>
 
-                    <img src="Bilder_Min_Nya_Hemsida/IMG_4068.JPG" alt="Me chilling in the pool" width="100%">
-                </div>
 
-                <div class="Message">
-                    <form method="post" id="Form_Message" name="Contact" action="contact.php">
-                        <div class="FullName">
-                            <p id="submitted_top_error"></p>
-                            <h3>Full Name *</h3>
-                            <p class="text_message">I'd like to know who I am speaking with.</p>
-
-                   
-                            <div class="hej">
-                                <input type="text" name="FirstName" value="">
-                                <p class="text_message">First name</p>
-                                <p id="text_error_fullname"></p>
-                            </div>
+            <article>
+                <div id="bild1"><img src="Bilder_Min_Nya_Hemsida/img1.jpg" alt="Hejsan" width="100%"></div>
                 
-                       
-                            <div class="hej">   
-                                <input type="text" name="LastName" value=""> 
-                                <p class="text_message">Last name</p>
-                                
-                            </div>
-                        </div>                    
-                        
-                        <div class="hej">
-                            <h3>Email *</h3>
-                            <input type="text" name="Email" value="" style="width: 250px;">
-                            <p id="text_error_email"></p>
-                        </div>
-                    
-                        <div class="hej">
-                            <h3>Message *</h3>
-                            <p class="text_message">Write something cool to me!!</p>
-                            <p id="text_error_message"></p>
-                            <textarea class="text_message" rows="4" cols="50" maxlength="500"
-                                      onkeyup="countChar(this)" name="Message"></textarea><br>
-                            <p id="charNum">500</p>
-                            <p id="Char_Limit">Limit 500 Charaters</p>
-                            
-                        </div> 
-
-
-                        <br><input type="submit" id="Button" value="SEND" onclick="submitted(); return false;">
-                        <p id="submitted_bottom"></p>
-                        <p id="submitted_bottom_error"></p>
-                    </form>
+                
+                
+                <div class="social_media_list">
+                    <ul class="list-bottom">
+                        <li><a href="https://www.youtube.com/channel/UCBms3psUoKjXpuZtNCxB2wA" target="_blank"><img class="social_media_logos" src="Bilder_Min_Nya_Hemsida/youtube1.png" alt="youtbe-logo" width="5%"></a></li>
+                        <li><a href="https://www.instagram.com/iammattej" target="_blank"><img class="social_media_logos" src="Bilder_Min_Nya_Hemsida/Instagram_icon.png" alt="Instagram-logo" width="5%"></a></li>
+                        <li><a href="https://www.twitter.com/IAmMatteJ" target="_blank"><img class="social_media_logos" src="Bilder_Min_Nya_Hemsida/Twitter_bird_logo_2012.svg.png" alt="twitter-logo" width="5%"></a></li>
+                    </ul>
                 </div>
+            
             </article>
 
         </div>
+        
     </body>
 </html>
