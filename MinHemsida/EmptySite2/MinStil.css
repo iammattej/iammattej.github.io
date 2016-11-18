@@ -371,6 +371,10 @@ iframe {
     width: 100%;
 }
 
+textarea {
+    width: 250px;
+}
+
 .dropbtn {
     background-color: #FFF;
     color: grey;
