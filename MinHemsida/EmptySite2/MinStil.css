@@ -337,14 +337,16 @@ article {
     margin: 5%;
 }
     
-.sidebar-left, .sidebar-right {
+.sidebar-left {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 15%;
 }
 
 .sidebar-right {
+    width: 90%;
     margin-left: 0;
+    margin-bottom: 15%;
 }
 #charNum {
     display: none;
