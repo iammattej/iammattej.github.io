@@ -343,6 +343,9 @@ article {
     margin-bottom: 15%;
 }
 
+.sidebar-right {
+    margin-left: 0;
+}
 #charNum {
     display: none;
 }
