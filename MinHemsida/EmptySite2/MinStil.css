@@ -290,7 +290,7 @@ textarea:focus {
 /* Applies only to contact.html (end) */
 
 /* MobileDevices (start)*/
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 1024px) {
                 #MegaBox {
     background-color: #fff;
     width: 100%;
