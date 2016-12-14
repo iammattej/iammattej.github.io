@@ -33,7 +33,7 @@ h1 {
 nav {
     height: 90%;
     width: 16%;
-    margin-top: 5.75%;
+    margin-top: 5.5%;
     background-color: #fff;
     float: left;
     position: fixed;
@@ -67,7 +67,7 @@ aside {
     height: 100%;
     float: right;
     margin-left: 64%;
-    margin-top: 5.75%;
+    margin-top: 5.5%;
     position: fixed;
     background-color: #FFF;
 }
