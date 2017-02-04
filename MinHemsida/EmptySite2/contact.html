@@ -45,37 +45,35 @@
                 <div class="Contact">
                     <h1>Contact</h1>
                     <div><p style="margin-bottom: 5%;">Email: </p><a id="Email" href="mailto:MatteJ.Contact@gmail.com">MatteJ.Contact@gmail.com</a></div>
-                    <p id="Email_Info1">Feel free to send me a message by writing to the right or 
-                       by sending me an email to my gmail above</p>
-                    <p id="Email_Info2">Feel free to send me a message by writing in the form below or 
-                       by sending me an email to my gmail above</p>
+                    <p id="Email_Info1">Please fill in the contact form to the right or send me an email  to my email address above and I will replay as soon as possible.</p>
+                    <p id="Email_Info2">Please fill in the contact form below or send me an email to my email address above and I will replay as soon as possible.</p>
 
                     <img src="Bilder_Min_Nya_Hemsida/IMG_4068.JPG" alt="Me chilling in the pool" width="100%">
                 </div>
 
                 <div class="Message">
-                    <form method="post" id="Form_Message" name="Contact" action="">
+                    <form method="post" id="Form_Message" name="Contact" action="contact.php">
                         <table>
                             <tr>
-                                <th><label>Fullname *</label></th>
+                                <th><label class="lblhdr">Fullname *</label></th>
                             </tr>
                             <tr>
                                 <th><label class="text_message">I'd like to know who I am speaking with.</label></th>
                             </tr>
                             <tr>
-                                <td><label style="margin-right:100px; ">First Name</label><label>Last Name</label></td>
+                                <td><label style="margin-right:100px; font-family: '3ds';font-size: 0.875em;">First Name</label><label style="font-family: '3ds';font-size: 0.875em;">Last Name</label></td>
                             </tr>
                             <tr>
                                 <td><input type="text" name="FirstName" id="ipttbx1"><input type="text" name="LastName" id="ipttbx1"></td>
                             </tr>
                             <tr>
-                                <th><label>Email *</label></th>
+                                <th><label class="lblhdr">Email *</label></th>
                             </tr>
                             <tr>
                                 <td><input type="Email" name="Email" class="Email" id="ipttbx2"></td>
                             </tr>
                             <tr>
-                                <th><label>Message *</label></th>
+                                <th><label  class="lblhdr">Message *</label></th>
                             </tr>
                             <tr>
                                 <td><textarea class="text_message" rows="4" cols="50" maxlength="500" onkeyup="countChar(this)" name="Message"></textarea></td>
@@ -86,7 +84,6 @@
                             <tr>
                                 <td><input type="submit" value="SEND" id="Button"></td>
                             </tr>
-
                         </table>
                     </form>
                 </div>
