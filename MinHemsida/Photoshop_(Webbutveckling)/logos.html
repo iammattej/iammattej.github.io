@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Photoshop-uppgifter</title>
+        <script src="MinJavaScript.js"></script>
+        <link href="MinStil.css" type="text/css" rel="stylesheet">
+    </head>
+    <body onload="clock();">
+        <div id="storbox">
+            <header>
+                <h1 onclick="location.href='index.html'">Inlämning av Photoshop-uppgifter</h1>
+                <img src="Bilder/NyaMatteJ-logga(vit).png" alt="Matte J-logga" height="100%;" style="margin-right: 0%;">
+            </header>
+            <nav id="Sidenav" class="sidenav">
+                <div class="closebtn" onclick="closeNav()">×</div>
+                <input type="button" class="Knapp" onclick="location.href='index.html'" value="Start">
+                <input type="button" class="Knapp" onclick="location.href='banner.html'" value="Banner">
+                <input type="button" class="Knapp" onclick="location.href='face.html'" value="Bildmanipulation">
+                <input type="button" class="Knapp" onclick="location.href='logos.html'" value="Logos">
+                <hr>
+                <form name="clock">
+                    <h3>Tid sedan sidan skapades</h3>
+                    <table>
+                        <tr><td><input class="klocka" name="years" size="2" readonly="readonly"> <label>År</label></td></tr>
+                        <tr><td><input class="klocka" name="days" size="2" readonly="readonly"> <label>Dagar</label></td></tr>
+                        <tr><td><input class="klocka" name="hours" size="2" readonly="readonly"> <label>Timmar</label></td></tr>
+                        <tr><td><input class="klocka" name="mins" size="2" readonly="readonly"><label>Minuter</label></td></tr>
+                        <tr><td><input class="klocka" name="secs" size="2" readonly="readonly"><label>Sekunder</label></td></tr>                    </table>                </form>
+                <hr>
+                <p style="margin-top: 10%">Gjord av Matte J</p>
+            </nav>
+            <div id="openbtn" onclick="openNav()">☰</div>
+            <article id="atclimg">
+                <div class="Bild" onclick="openImg1()"><img class="img3" src="Bilder/PIPE_Just_Smoke_It.jpg" alt="PIPE"></div>
+                <div class="Bild" onclick="openImg2()"><img class="img4" src="Bilder/FatExes.jpg" alt="Fat Exes"></div>
+            </article>
+            <aside>
+                <div style="margin-top: -20%;">
+                    <div id="Knapp" onclick="openImg1()">Förstora bilden</div>
+                    <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
+                    <div id="Knapp" onclick="location.href='Bilder/PIPE_Just_Smoke_It.psd';">Ladda ner bilden</div>
+                </div>
+                <div style="margin-top: 60%; margin-bottom: 30%;">
+                    <div id="Knapp" onclick="openImg2()">Förstora bilden</div>
+                    <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
+                    <div id="Knapp" onclick="location.href='Bilder/FatExes.psd';">Ladda ner bilden</div>
+                </div>
+            </aside>   
+            <div id="Modal_profile1">
+                <div class="modal-content" style="background-color: #fff; width: 100%; border:1px solid black;">
+                    <span id="close" onclick="myFunction1()">X</span>
+                    <div class="modal-body">
+				        <img src="Bilder/PIPE_Just_Smoke_It.jpg" alt="PIPE" width="80%" height="80%;">
+                    </div>
+                </div>
+            </div>
+            <div id="Modal_profile2">
+                <div class="modal-content" style="background-color: #fff; width: 100%; border:1px solid black; margin-top: 10%;">
+                    <span id="close" onclick="myFunction2()">X</span>
+                    <div class="modal-body" style="width: 90%;">
+				        <img src="Bilder/FatExes.jpg" alt="Fat Exes" width="80%" height="80%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

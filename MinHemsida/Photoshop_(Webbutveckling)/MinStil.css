@@ -1,0 +1,238 @@
+body {
+    margin:  0;
+    background-color: #000;
+}
+#storbox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+header {
+    margin-top: 0;
+    width: 100%;
+    height: 20%;
+    background-color: blue;
+    position: fixed;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Myriad CAD';
+    font-size: 40pt;
+    margin-top: 2.5%;
+    width: 80%;
+    float: left;
+}
+h1:hover, img:hover {
+    cursor: pointer;
+}
+article {
+    height: 80%;
+    margin-top: 9%;
+}
+aside {
+    width: 25%;
+    float: left;
+    margin-top: 20%;
+}
+#atclimg {
+    margin-left: 10%;
+    width: 50%;
+    float: left;
+}
+.länk {
+    width: 20%;
+    height: 60%;
+    float: left;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-color: #fff;
+}
+.länk:hover, #Knapp:hover {
+    cursor: pointer;
+}
+p {
+    font-family: Myriad CAD;
+    text-align: center;
+    margin-bottom: 5%;
+    
+}
+.img1 {
+    height: 48.2%;
+    width: 100%;
+    margin-top: 17%;
+    margin-left: -10%;
+    border: 10px solid #FFF;
+}
+.img2 {
+    height: 80%;
+    width: 41.5%;
+    margin-top: 5%;
+    margin-left: 10%; 
+    border: 10px solid #FFF;
+}
+.img3 {
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 0%;
+    border: 10px solid #FFF;
+}
+.img4 {
+     width: 80%;
+     margin-top: 10%;
+     margin-left: 0%;
+     border: 10px solid #FFF;
+}
+#atclimg {
+    margin-left: 10%;
+    width: 50%;
+    float: left;
+}
+aside {
+    width: 25%;
+    float: left;
+    margin-top: 20%;
+}
+#Knapp {
+    background-color: blue;
+    width: 250px;
+    height: 25px;
+    border: 3px solid #fff;
+    padding: 10px;
+    margin: 25px;
+    text-align:center;
+    font-size: 20px;
+    font-family: Myriad CAD;
+    color: #fff;
+}
+.Knapp {
+    padding:10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    background-color: #0000FF;
+    width: 13vw;
+    height: 4vw;
+    margin-left: 1vw;
+    border: 0px;
+    font-family: Kozuka Gothic Pro
+}
+.nav {
+    background-color: #0000FF;
+    width: 100vw;
+    height: 20vw;
+    border: 0px solid #888;
+    padding: 10px;
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+    color: #FFF;
+    clear: left;
+    font-family: '3ds';
+}
+.nav:hover {
+    cursor: pointer;
+    background-color: #00008B;
+}
+.sidenav {
+    height: 45vw;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    margin-top: 9%;
+    margin-left: 0;
+    background-color: #0000FF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav p {
+    color: #f8f8f8;
+}
+.Knapp:hover{
+    cursor: pointer;
+    color: #FFF;
+    background-color: #00008B; 
+}
+.closebtn:hover {
+        cursor: pointer;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+}
+#openbtn {
+     font-size:30px;
+     cursor:pointer;
+     color: #0000FF;
+     margin-top: 9%;
+     width: 5vw;
+     float: left;
+     position: fixed;
+     color: #fff;
+}
+#Modal_profile1, #Modal_profile2 {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 10px;
+}
+.modal-body { height: 100%;text-align: right;}
+span {
+    cursor: pointer;
+    color: black;
+    float: right;
+    font-size: 15pt;
+    font-weight: bold;
+    top: 0;
+    margin-right: 3%;
+}
+.modal-content1 {
+    background-color: #fff;
+    width: 95%;
+    border:1px solid black;
+    margin-left: 2.5%;
+    margin-top: 5%
+}
+.klocka {
+    border: none;
+    font-family: Myriad CAD;
+    font-size: 10pt;
+    width: 15%;
+    color: #fff;
+    background-color: blue;
+    margin-bottom: 0;
+}
+label {
+    padding: 5px;
+    font-family: Myriad CAD;
+    font-size: 10pt;
+    color: #fff;
+    margin-bottom: 0;
+    margin-left: 10%;
+    margin-right: 0;
+    text-align: left;
+}
+form {
+    text-align: left;
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+}
+h3 {
+    font-family: Myriad CAD;
+    font-size: 10pt;
+    color: #fff;
+}
+table {
+    margin-left: 20%;
+}
