@@ -3,6 +3,7 @@
 body {
     background-color: #fff;
     margin: 0;
+    overflow-x: hidden;
 }
 
 #MegaBox {
@@ -21,10 +22,14 @@ header {
     margin-bottom: 5%;
 }
 
+header img {
+    height: 100%;
+}
+
 nav {
     background-color: #fff;
     width: 70%;
-    margin-left: 10%;
+    margin-left: 15%;
     text-align: center;
     margin-bottom: 5%;
 }
@@ -46,7 +51,7 @@ li {
 
 a {
     font-family: '3ds';
-    font-size: 30px;
+    font-size: 2em;
     text-decoration: none;
     color: #888888;
     text-align: center;
@@ -66,10 +71,16 @@ article {
 
 p {
     font-family: '3ds';
-    font-size: 20px;
+    font-size: 1.25em;
     text-decoration: none;
     color: #888888;
 }
+h1 {
+    font-family: '3ds';
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #888888;
+} 
 
 #Button {
     background-color: white;
@@ -79,7 +90,7 @@ p {
     padding: 10px;
     margin: 25px;
     text-align:center;
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: '3ds';
     color: #888888;
     clear: left;
@@ -115,7 +126,12 @@ p {
     width: 100%;
     margin-bottom: 5%;
 }
-
+iframe {
+    width: 418px;
+    height: 233px;
+    allowfullscreen: allowfullscreen;
+    frameborder: 0;
+}
 .sidebar-left {
     float: left;
     width: 50%;
@@ -137,7 +153,7 @@ p {
 .social_media {
     text-align: left;
     font-family: '3ds';
-    font-size: 25px;
+    font-size: 1.5625em;
     color: #888888;
 }
 
@@ -147,6 +163,9 @@ p {
 
 #InstagramFeed {
     margin-bottom: 50%;
+    width: 95%;
+    text-align: left;
+    margin-left: 5%;
 }
 
 /* Applies only to social_media.html (end)*/
@@ -178,17 +197,27 @@ input {
     height: 15px;
     width: 100px;
     font-family: '3ds';
-    font-size: 12px;
+    font-size: 0.75em;
     padding: 5px 10px 5px 10px;
     border: 1px solid #888888;
 }
 
-.hej {
-    float: left;
+.lblhdr {
+    font-size: 16pt;
+    font-family: '3ds';
+}
+
+#ipttbx1 {
+    width: 100px;
+}
+
+#ipttbx2 {
+    width: 270px;
 }
 
 .text_message {
-    font-size: 14px;
+    font-size: 0.875em;
+    font-family: '3ds';
 }
 
 .Contact {
@@ -204,7 +233,7 @@ input {
 }
 
 #Email {
-     font-size: 20px;
+     font-size: 1.25em;
      border: 1px solid black;
      padding: 5px;
 }
@@ -225,9 +254,9 @@ textarea {
     margin-bottom: 5px;
     background-color: rgb(240,240,240);
     height: 120px;
-    width: 300px;
+    width: 270px;
     font-family: '3ds';   
-    font-size: 20px;
+    font-size: 1.25em;
     padding: 5px 10px 5px 10px;
     border: 1px solid #888888;
     resize: vertical;
@@ -242,7 +271,6 @@ textarea:focus {
     background-color: #fff;
 }
 
-
 #charNum {
     float: left;
 }
@@ -252,45 +280,19 @@ textarea:focus {
     font-size: 10pt;
 }
 
-#text_error_fullname {
-    background-color: red;
-    color: #fff;
-    font-size: 14px;
-}
-
-#text_error_email {
-    background-color: red;
-    color: #fff;
-    font-size: 14px;
-    width: fit-content;
-}
-
-#text_error_message {
-    background-color: red;
-    color: #fff;
-    font-size: 14px;
-    width: fit-content;
-}
-
-#submitted_top_error {
-    background-color: red;
-    color: #fff;
-    font-size: 14px;
-    width: fit-content;
-}
-
-#submitted_bottom_error {
-    background-color: red;
-    color: #fff;
-    font-size: 14px;
-    width: fit-content;
+.error {
+    width: 200px;
+    border: 3px solid #f00;
+    color: #f00;
+    font-size: 12pt;
+    margin-left: 5%;
 }
 
 
 /* Applies only to contact.html (end) */
 
 /* MobileDevices (start)*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 736px) {
                 #MegaBox {
     background-color: #fff;
     width: 100%;
@@ -336,18 +338,12 @@ article {
 #videos h1, #InstagramFeed h1 {
     margin: 5%;
 }
-    
-.sidebar-left {
+.sidebar-left, .sidebar-right {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 15%;
 }
 
-.sidebar-right {
-    width: 90%;
-    margin-left: 0;
-    margin-bottom: 15%;
-}
 #charNum {
     display: none;
 }
@@ -373,20 +369,28 @@ iframe {
     display: block;
 } 
 
+.email {
+    width: 200px;
+}   
+
 .FullName {
     width: 100%;
 }
 
 textarea {
-    width: 250px;
+    width: 200px;
+}
+
+input, #ipttbx {
+    width: 200px;
 }
 
 .dropbtn {
     background-color: #FFF;
     color: grey;
-    padding: 16px;
+    padding: 20px;
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     text-align:center;
 }
@@ -405,9 +409,10 @@ textarea {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 200px;
+    min-width: 150px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 .dropdown-content a {
@@ -415,7 +420,8 @@ textarea {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 12pt;
+    font-size: 1em;
+
 }
 
 .dropdown a:hover {background-color: #f1f1f1}
@@ -424,3 +430,27 @@ textarea {
 }
 
 /* MobileDevices (end)*/
+
+@media screen and (min-width: 1655px) {
+    #contact {
+        width: 70%;
+        margin-left: 15%;       
+    }
+    .Message, .Contact, nav, .bio, .social_media{
+        font-size: 200%;
+    }
+    iframe {
+    width: 538px;
+    height: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 1188px) and (min-width: 736px) {
+    nav {
+        width: 100%;
+        margin-left: 0;
+        font-size: 70%;
+    }
+}
+
