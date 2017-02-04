@@ -54,48 +54,40 @@
                 </div>
 
                 <div class="Message">
-                    <form method="post" id="Form_Message" name="Contact" action="contact.php">
-                        <div class="FullName">
-                            <p id="submitted_top_error"></p>
-                            <h3>Full Name *</h3>
-                            <p class="text_message">I'd like to know who I am speaking with.</p>
+                    <form method="post" id="Form_Message" name="Contact" action="">
+                        <table>
+                            <tr>
+                                <th><label>Fullname *</label></th>
+                            </tr>
+                            <tr>
+                                <th><label class="text_message">I'd like to know who I am speaking with.</label></th>
+                            </tr>
+                            <tr>
+                                <td><label style="margin-right:100px; ">First Name</label><label>Last Name</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="FirstName" id="ipttbx1"><input type="text" name="LastName" id="ipttbx1"></td>
+                            </tr>
+                            <tr>
+                                <th><label>Email *</label></th>
+                            </tr>
+                            <tr>
+                                <td><input type="Email" name="Email" class="Email" id="ipttbx2"></td>
+                            </tr>
+                            <tr>
+                                <th><label>Message *</label></th>
+                            </tr>
+                            <tr>
+                                <td><textarea class="text_message" rows="4" cols="50" maxlength="500" onkeyup="countChar(this)" name="Message"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label id="charNum">500</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="SEND" id="Button"></td>
+                            </tr>
 
-                   
-                            <div class="hej">
-                                <input type="text" name="FirstName" value="">
-                                <p class="text_message">First name</p>
-                                <p id="text_error_fullname"></p>
-                            </div>
-                
-                       
-                            <div class="hej">   
-                                <input type="text" name="LastName" value=""> 
-                                <p class="text_message">Last name</p>
-                                
-                            </div>
-                        </div>                    
-                        
-                        <div class="hej">
-                            <h3>Email *</h3>
-                            <input type="text" name="Email" value="" style="width: 250px;">
-                            <p id="text_error_email"></p>
-                        </div>
-                    
-                        <div class="hej">
-                            <h3>Message *</h3>
-                            <p class="text_message">Write something cool to me!!</p>
-                            <p id="text_error_message"></p>
-                            <textarea class="text_message" rows="4" cols="50" maxlength="500"
-                                      onkeyup="countChar(this)" name="Message"></textarea><br>
-                            <p id="charNum">500</p>
-                            <p id="Char_Limit">Limit 500 Charaters</p>
-                            
-                        </div> 
-
-
-                        <br><input type="submit" id="Button" value="SEND" onclick="submitted(); return false;">
-                        <p id="submitted_bottom"></p>
-                        <p id="submitted_bottom_error"></p>
+                        </table>
                     </form>
                 </div>
             </article>
