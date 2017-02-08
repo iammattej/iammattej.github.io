@@ -30,16 +30,21 @@ h1:hover, img:hover {
 article {
     height: 80%;
     margin-top: 9%;
-}
-aside {
-    width: 25%;
-    float: left;
-    margin-top: 20%;
+    margin-bottom: 10%;
 }
 #atclimg {
     margin-left: 10%;
     width: 50%;
     float: left;
+}
+#atclbtns {
+    margin-top: 10%;
+    width: 40%;
+    float: left;
+}
+#atclbtns p {
+    color: #fff;
+    width: 55%;
 }
 .länk {
     width: 20%;
@@ -83,16 +88,6 @@ p {
      margin-top: 10%;
      margin-left: 0%;
      border: 10px solid #FFF;
-}
-#atclimg {
-    margin-left: 10%;
-    width: 50%;
-    float: left;
-}
-aside {
-    width: 25%;
-    float: left;
-    margin-top: 20%;
 }
 #Knapp {
     background-color: blue;
@@ -177,7 +172,7 @@ aside {
      position: fixed;
      color: #fff;
 }
-#Modal_profile1, #Modal_profile2 {
+#Modal_profile1, #Modal_profile2, #Modal_profile3 {
     display: none;
     position: fixed;
     z-index: 1; 
@@ -191,7 +186,7 @@ span {
     cursor: pointer;
     color: black;
     float: right;
-    font-size: 15pt;
+    font-size: 32pt;
     font-weight: bold;
     top: 0;
     margin-right: 3%;
@@ -201,7 +196,7 @@ span {
     width: 95%;
     border:1px solid black;
     margin-left: 2.5%;
-    margin-top: 5%
+    margin-top: 0;
 }
 .klocka {
     border: none;
@@ -235,4 +230,7 @@ h3 {
 }
 table {
     margin-left: 20%;
+}
+#år {
+    display: none;
 }
