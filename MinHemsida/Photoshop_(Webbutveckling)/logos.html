@@ -23,47 +23,68 @@
                 <form name="clock">
                     <h3>Tid sedan sidan skapades</h3>
                     <table>
-                        <tr><td><input class="klocka" name="years" size="2" readonly="readonly"> <label>År</label></td></tr>
+                        <tr  id="år"><td><input class="klocka" name="years" size="2" readonly="readonly"> <label>År</label></td></tr>
                         <tr><td><input class="klocka" name="days" size="2" readonly="readonly"> <label>Dagar</label></td></tr>
                         <tr><td><input class="klocka" name="hours" size="2" readonly="readonly"> <label>Timmar</label></td></tr>
                         <tr><td><input class="klocka" name="mins" size="2" readonly="readonly"><label>Minuter</label></td></tr>
-                        <tr><td><input class="klocka" name="secs" size="2" readonly="readonly"><label>Sekunder</label></td></tr>                    </table>                </form>
+                        <tr><td><input class="klocka" name="secs" size="2" readonly="readonly"><label>Sekunder</label></td></tr>
+                    </table>
+                </form>
                 <hr>
                 <p style="margin-top: 10%">Gjord av Matte J</p>
             </nav>
             <div id="openbtn" onclick="openNav()">☰</div>
-            <article id="atclimg">
-                <div class="Bild" onclick="openImg1()"><img class="img3" src="Bilder/PIPE_Just_Smoke_It.jpg" alt="PIPE"></div>
-                <div class="Bild" onclick="openImg2()"><img class="img4" src="Bilder/FatExes.jpg" alt="Fat Exes"></div>
-            </article>
-            <aside>
-                <div style="margin-top: -20%;">
-                    <div id="Knapp" onclick="openImg1()">Förstora bilden</div>
-                    <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
-                    <div id="Knapp" onclick="location.href='Bilder/PIPE_Just_Smoke_It.psd';">Ladda ner bilden</div>
+            <article>
+                <div id="atclimg" style="margin-top: 5%;">
+                    <div class="Bild" onclick="openImg1()"><img class="img3" src="Bilder/PIPE_Just_Smoke_It.jpg" alt="PIPE"></div>
                 </div>
-                <div style="margin-top: 60%; margin-bottom: 30%;">
-                    <div id="Knapp" onclick="openImg2()">Förstora bilden</div>
-                    <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
-                    <div id="Knapp" onclick="location.href='Bilder/FatExes.psd';">Ladda ner bilden</div>
+                <div id="atclbtns">
+                        <div id="Knapp" onclick="openImg1()">Förstora bilden</div>
+                        <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
+                        <div id="Knapp" onclick="location.href='Bilder/PIPE_Just_Smoke_It.psd';">Ladda ner bilden</div>
                 </div>
-            </aside>   
-            <div id="Modal_profile1">
-                <div class="modal-content" style="background-color: #fff; width: 100%; border:1px solid black;">
-                    <span id="close" onclick="myFunction1()">X</span>
-                    <div class="modal-body">
-				        <img src="Bilder/PIPE_Just_Smoke_It.jpg" alt="PIPE" width="80%" height="80%;">
+                <div id="atclimg" style="margin-top: 5%;">
+                    <div class="Bild" onclick="openImg2()"><img class="img4" src="Bilder/FatExes.jpg" alt="Fat Exes"></div>
+                </div>
+                <div id="atclbtns">
+                        <div id="Knapp" onclick="openImg2()">Förstora bilden</div>
+                        <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
+                        <div id="Knapp" onclick="location.href='Bilder/FatExes.psd';">Ladda ner bilden</div>
+                </div>
+                <div id="atclimg" style="margin-top: 5%;">
+                    <div class="Bild" onclick="openImg2()"><img class="img4" src="Bilder/Pumba.jpg" alt="Fat Exes"></div>
+                </div>
+                <div id="atclbtns" style="margin-top: 15%;">
+                        <div id="Knapp" onclick="openImg3()">Förstora bilden</div>
+                        <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
+                        <div id="Knapp" onclick="location.href='Bilder/Pumba.psd';">Ladda ner bilden</div>
+                </div>
+              
+                <div id="Modal_profile1">
+                    <div class="modal-content" style="background-color: #fff; height: fit-content; border:1px solid black;">
+                        <span id="close" onclick="myFunction1()">X</span>
+                        <div class="modal-body">
+				            <img src="Bilder/PIPE_Just_Smoke_It.jpg" alt="PIPE" width="60%;" style="margin-right: 15%;">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="Modal_profile2">
-                <div class="modal-content" style="background-color: #fff; width: 100%; border:1px solid black; margin-top: 10%;">
-                    <span id="close" onclick="myFunction2()">X</span>
-                    <div class="modal-body" style="width: 90%;">
-				        <img src="Bilder/FatExes.jpg" alt="Fat Exes" width="80%" height="80%;">
+                <div id="Modal_profile2">
+                    <div class="modal-content" style="background-color: #fff; height: fit-content; border:1px solid black; margin-top: 10%;">
+                        <span id="close" onclick="myFunction2()">X</span>
+                        <div class="modal-body" style="width: 90%;">
+				            <img src="Bilder/FatExes.jpg" alt="Fat Exes" width="70%">
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div id="Modal_profile3">
+                    <div class="modal-content" style="background-color: #fff; height: fit-content; border:1px solid black;">
+                        <span id="close" onclick="myFunction3()">X</span>
+                        <div class="modal-body"style="width: 90%;">
+				            <img src="Bilder/Pumba.jpg" alt="Pumba" width="60%" style="margin-right: 15%;">
+                        </div>
+                    </div>
+                </div>
+            </article> 
         </div>
     </body>
 </html>
