@@ -23,31 +23,35 @@
                 <form name="clock">
                     <h3>Tid sedan sidan skapades</h3>
                     <table>
-                        <tr><td><input class="klocka" name="years" size="2" readonly="readonly"> <label>År</label></td></tr>
+                        <tr  id="år"><td><input class="klocka" name="years" size="2" readonly="readonly"> <label>År</label></td></tr>
                         <tr><td><input class="klocka" name="days" size="2" readonly="readonly"> <label>Dagar</label></td></tr>
                         <tr><td><input class="klocka" name="hours" size="2" readonly="readonly"> <label>Timmar</label></td></tr>
                         <tr><td><input class="klocka" name="mins" size="2" readonly="readonly"><label>Minuter</label></td></tr>
-                        <tr><td><input class="klocka" name="secs" size="2" readonly="readonly"><label>Sekunder</label></td></tr>                    </table>                </form>
+                        <tr><td><input class="klocka" name="secs" size="2" readonly="readonly"><label>Sekunder</label></td></tr>
+                    </table>
+                </form>
                 <hr>
                 <p style="margin-top: 10%">Gjord av Matte J</p>
             </nav>
             <div id="openbtn" onclick="openNav()" style="color: #fff;">☰</div>
-            <article id="atclimg">
-                <div class="Bild2" onclick="openImg1()"><img class="img2" src="Bilder/Kate_Upton.jpg" alt="Kate Upton" height="100%"></div>
-            </article>
-            <aside>
-                <div id="Knapp" onclick="openImg1()">Förstora bilden</div>
-                <p style="color: #fff;">Om du vill ladda ner min bild, klicka på knappen nedan.</p>
-                <div id="Knapp" onclick="location.href='Bilder/Kate_Upton.psd';">Ladda ner bilden</div>
-            </aside>
-            <div id="Modal_profile1">
-                <div class="modal-content" style="background-color: #fff; height: 90%; width: fit-content; border:1px solid black; margin-left: 30%; margin-top: 0%">
-                    <span id="close" onclick="myFunction1()">X</span>
-                    <div class="modal-body">
-				        <img src="Bilder/Kate_Upton.jpg" alt="Kate Upton" height="100%" >
+            <article>
+                <div id="atclimg">
+                    <div class="Bild2" onclick="openImg1()"><img class="img2" src="Bilder/Kate_Upton.jpg" alt="Kate Upton" height="100%"></div>
+                </div>
+                <div id="atclbtns">
+                    <div id="Knapp" onclick="openImg1()">Förstora bilden</div>
+                    <p>Om du vill ladda ner min bild, klicka på knappen nedan.</p>
+                    <div id="Knapp" onclick="location.href='Bilder/Kate_Upton.psd';">Ladda ner bilden</div>
+                </div>
+                <div id="Modal_profile1">
+                    <div class="modal-content" style="background-color: #fff; height: 90%; width: fit-content; border:1px solid black; margin-left: 30%; margin-top: 0%">
+                        <span id="close" onclick="myFunction1()">X</span>
+                        <div class="modal-body"style="width: fit-content; margin-top: 5%;">
+				            <img src="Bilder/Kate_Upton.jpg" alt="Kate Upton" height="90%" >
+                        </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </body>
 </html>
