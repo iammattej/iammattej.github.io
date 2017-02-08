@@ -9,6 +9,11 @@ function myFunction2 (){
     modal.style.display = "none";
     document.body.style.overflow = "";
 }
+function myFunction3 (){
+    var modal = document.getElementById('Modal_profile3');
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+}
 
 function openImg1() {
     var modal = document.getElementById('Modal_profile1');
@@ -18,6 +23,11 @@ function openImg1() {
 
 function openImg2() {
     var modal = document.getElementById('Modal_profile2');
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+function openImg3() {
+    var modal = document.getElementById('Modal_profile3');
     modal.style.display = "block";
     document.body.style.overflow = "hidden";
 }
@@ -81,24 +91,26 @@ function timer(){
 	document.clock.days.value = dag
 	document.clock.years.value = år
 	if (sek < 59){
-		sek++
+	    sek++;
 	}
 	else{
-		sek = "0"
-		min++
+	    sek = "0";
+	    min++;
 		if (min > 59){
-			min = "00"
-			timme++
-	    if (timme > 23){
-			timme = "0"
-			dag++
-		if (dag >364){
-			dag = "0"
-			år++
-	    }
+		    min = "00";
+		    timme++;
+	        if (timme > 23){
+	            timme = "0";
+	            dag++;
+		        if (dag >364){
+		            dag = "0";
+		            år++;
+	            }      
+		    }
 		}
-		}
-
 	}
-     window.setTimeout("timer()",1000)
+    if (år > 0) {
+        document.getElementById('år').style.display = "table-row";
+    }
+    window.setTimeout("timer()",1000)
 }
