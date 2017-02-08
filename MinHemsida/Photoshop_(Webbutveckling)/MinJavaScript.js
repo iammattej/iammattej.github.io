@@ -34,8 +34,8 @@ function openImg3() {
 
 function openNav() {
     document.getElementById("Sidenav").style.width = "15vw";
-    document.getElementById("Sidenav").style.marginTop = "9%";
-    document.getElementById("openbtn").style.marginTop = "9%";
+    document.getElementById("Sidenav").style.marginTop = "10%";
+    document.getElementById("openbtn").style.marginTop = "10%";
     document.getElementById("header").addEventListener("click", closeNav);
     document.getElementById("atclimg").addEventListener("click", closeNav);
 }
