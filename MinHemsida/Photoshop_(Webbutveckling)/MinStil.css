@@ -93,7 +93,7 @@ p {
      margin-left: 0%;
      border: 10px solid #FFF;
 }
-#Knapp {
+.Knappar {
     background-color: blue;
     width: 250px;
     height: 25px;
