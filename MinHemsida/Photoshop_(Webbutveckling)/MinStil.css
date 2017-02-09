@@ -58,7 +58,7 @@ article {
     margin-left: 10%;
     background-color: #fff;
 }
-.länk:hover, #Knapp:hover {
+.länk:hover, .Knappar:hover {
     cursor: pointer;
 }
 p {
