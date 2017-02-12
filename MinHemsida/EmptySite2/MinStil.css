@@ -1,5 +1,8 @@
 /* Applies to every page (start)*/
-
+@font-face {
+    font-family: MyFont;
+    src: url("3ds_Light.otf") format("opentype");
+}
 body {
     background-color: #fff;
     margin: 0;
@@ -50,7 +53,7 @@ li {
 }
 
 a {
-    font-family: '3ds';
+    font-family: 'MyFont';
     font-size: 2em;
     text-decoration: none;
     color: #888888;
@@ -70,13 +73,13 @@ article {
 }
 
 p {
-    font-family: '3ds';
+    font-family: 'MyFont';
     font-size: 1.25em;
     text-decoration: none;
     color: #888888;
 }
 h1 {
-    font-family: '3ds';
+    font-family: 'MyFont';
     font-size: 1.5em;
     text-decoration: none;
     color: #888888;
@@ -91,7 +94,7 @@ h1 {
     margin: 25px;
     text-align:center;
     font-size: 1.25em;
-    font-family: '3ds';
+    font-family: 'MyFont';
     color: #888888;
     clear: left;
 }
@@ -152,7 +155,7 @@ iframe {
 
 .social_media {
     text-align: left;
-    font-family: '3ds';
+    font-family: 'MyFont';
     font-size: 1.5625em;
     color: #888888;
 }
@@ -196,7 +199,7 @@ input {
     background-color: rgb(240,240,240);
     height: 15px;
     width: 100px;
-    font-family: '3ds';
+    font-family: 'MyFont';
     font-size: 0.75em;
     padding: 5px 10px 5px 10px;
     border: 1px solid #888888;
@@ -204,7 +207,7 @@ input {
 
 .lblhdr {
     font-size: 16pt;
-    font-family: '3ds';
+    font-family: 'MyFont';
 }
 
 #ipttbx1 {
@@ -217,7 +220,7 @@ input {
 
 .text_message {
     font-size: 0.875em;
-    font-family: '3ds';
+    font-family: 'MyFont';
 }
 
 .Contact {
@@ -255,7 +258,7 @@ textarea {
     background-color: rgb(240,240,240);
     height: 120px;
     width: 270px;
-    font-family: '3ds';   
+    font-family: 'MyFont';   
     font-size: 1.25em;
     padding: 5px 10px 5px 10px;
     border: 1px solid #888888;
