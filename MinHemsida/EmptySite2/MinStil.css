@@ -396,6 +396,7 @@ input, #ipttbx {
     font-size: 20px;
     cursor: pointer;
     text-align:center;
+    font-family: 'MyFont';
 }
             
 .dropbtn:hover, .dropbtn:focus {
