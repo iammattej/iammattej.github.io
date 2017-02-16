@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+    <head>
+        <meta charset="utf-8" />
+        <title>Javascript-inlämning </title>
+        <link href="MyStyle.css" rel="stylesheet" type="text/css">
+        <script src="MyJavaScript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#show").click(function () {
+                    $("#info").slideToggle("slow");
+                });
+            });
+        </script> 
+    </head>
+    <body onload="bytBild(); startTime();">
+        <div id="storbox">            <div id="centered">                <div id="Clock"><label id="ShowClock"></label></div>                <div id="show">Hur fungerar detta?<div id="arrow">></div></div>
+			    <div id="info">
+                    <p>Skriv in ett nummer nedan och tryck på "Visa numret" så kommer ditt nummer att visas.</p>
+                    <p>Med nummer menas både positiva och negativa samt decimaler som skrivs med en punkt.</p>
+                </div>
+                <div id="tbl1">
+                    <span id="err">Var vänlig skriv in ett nummer!</span>
+                    <input type="text" id="number" placeholder="Skriv ditt nummer här" onfocus="this.placeholder = ''" onblur="this.placeholder='Skriv ditt nummer här'" maxlength="20">
+                    <input type="submit" id="showbtn" value="Visa numret" onclick="showNum()">
+                </div>
+                <div id="tbl2">
+                    <p id="shownumber"></p>
+                    <input type="submit" id="newnum" value="Skriv in igen!" onclick="doAgain()">
+                </div>
+           </div>
+        </div>
+    </body>
+</html>
