@@ -1,6 +1,6 @@
 @font-face{
     font-family: MalmoFont;
-    src: url("malmosans-bold.otf") format("opentype");
+    src: url("MalmoSans-Bold.otf") format("opentype");
 }
 body {
     margin: 0;
