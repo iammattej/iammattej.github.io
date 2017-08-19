@@ -1,11 +1,58 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Namnlöst dokument</title>
-</head>
+<!DOCTYPE html>
+<html lang="en" onclick="showCoords(event)">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EgonGun</title>
+        <link href="MinStil.css" rel="stylesheet" type="text/css">
+        <script src="MyJavaScript.js"></script>   
+        <style>
+        body {
+          background: yellow;
+          margin: 0;
+        }
+        #animate {
+          width: 80px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+    </head>
+    <body onload="myMove()">
+        <p>
+            <span id="check"></span>
+            <span id="posW"></span>
+            <span id="posH"></span>
+            <p id="demo"></p>
+        </p> 
 
-<body>
-<a href="iammattej.github.io/start.html">hej</a>
-</body>
+        <div id ="container">
+        <div id ="animate"></div>
+        </div>
+        
+        <script>
+            function myMove() {
+                var elem = document.getElementById("animate");
+                var posW = 0;
+                var posH = Math.floor((Math.random() *  window.innerHeight) + 1);
+                var check = 0;
+                var boxW = elem.clientWidth;
+                var stop = window.innerWidth - boxW;
+                var id = setInterval(frame, 3);
+                function frame() {
+                    if (posW == stop) {check = 1;document.getElementById("check").innerHTML = check;}
+                    else if (check == 0) {posW++;elem.style.left = posW + 'px';elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW;document.getElementById("posH").innerHTML = posH; }
+                    if (check == 1) { posW--; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
+                    if (posW == 0) { check = 0; }
+                }
+            }
+            function showCoords(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                var coords = "X coords: " + x + ", Y coords: " + y;
+                document.getElementById("demo").innerHTML = coords;
+            }
+        </script>
+    </body>
 </html>
