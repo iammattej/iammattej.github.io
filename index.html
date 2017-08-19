@@ -7,16 +7,26 @@
         <link href="MinStil.css" rel="stylesheet" type="text/css">
         <script src="MyJavaScript.js"></script>   
         <style>
-        body {
-          background: yellow;
-          margin: 0;
-        }
-        #animate {
-          width: 80px;
-          height: 50px;
-          position: absolute;
-          background-color: red;
-        }
+            body {
+              background: yellow;
+              margin: 0;
+            }
+            #Nugget {
+              width: 80px;
+              height: 50px;
+              position: absolute;
+              background-color: red;
+            }
+            #player {
+              width: 50px;
+              height: 80px;
+              position: absolute;
+              background-color: red;
+            }
+            #NuggetContainer {
+                height: 400px;
+                
+            }
         </style>
     </head>
     <body onload="myMove()">
@@ -27,31 +37,41 @@
             <p id="demo"></p>
         </p> 
 
-        <div id ="container">
-        <div id ="animate"></div>
+        <div id="container">
+            <div id="NuggetContainer">
+                <div id="Nugget"></div> 
+            </div>
+            <div id="player"></div>
         </div>
         
         <script>
+            var player = new Object();
+            player.element = 'player';
+            player.x = window.innerWidth / 2;
+            player.y = window.innerHeight - 100;
+
+            function setPos(sprite) {
+                var e = document.getElementById(sprite.element);
+                e.style.left = sprite.x + 'px';
+                e.style.top = sprite.y + 'px';
+            }
+
+            setPos(player);
+
             function myMove() {
-                var elem = document.getElementById("animate");
+                var elem = document.getElementById("Nugget");
                 var posW = 0;
-                var posH = Math.floor((Math.random() *  window.innerHeight) + 1);
+                var posH = Math.floor((Math.random() * 340) + 50);
                 var check = 0;
                 var boxW = elem.clientWidth;
                 var stop = window.innerWidth - boxW;
                 var id = setInterval(frame, 3);
                 function frame() {
-                    if (posW == stop) {check = 1;document.getElementById("check").innerHTML = check;}
-                    else if (check == 0) {posW++;elem.style.left = posW + 'px';elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW;document.getElementById("posH").innerHTML = posH; }
+                    if (posW == stop) { check = 1; document.getElementById("check").innerHTML = check; }
+                    else if (check == 0) { posW++; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
                     if (check == 1) { posW--; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
                     if (posW == 0) { check = 0; }
                 }
-            }
-            function showCoords(event) {
-                var x = event.clientX;
-                var y = event.clientY;
-                var coords = "X coords: " + x + ", Y coords: " + y;
-                document.getElementById("demo").innerHTML = coords;
             }
         </script>
     </body>
