@@ -4,14 +4,12 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>EgonGun</title>
-        <link href="MinStil.css" rel="stylesheet" type="text/css">
-        <script src="MyJavaScript.js"></script>   
         <style>
             body {
               background: yellow;
               margin: 0;
             }
-            #Nugget {
+            .nugget {
               width: 80px;
               height: 50px;
               position: absolute;
@@ -23,13 +21,17 @@
               position: absolute;
               background-color: red;
             }
-            #NuggetContainer {
-                height: 400px;
-                
+            #shot {
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: blue;
+                position: absolute;
+                visibility: visible;
             }
         </style>
     </head>
-    <body onload="myMove()">
+    <body onload="Nugget()">
         <p>
             <span id="check"></span>
             <span id="posW"></span>
@@ -38,25 +40,30 @@
         </p> 
 
         <div id="container">
-            <div id="NuggetContainer">
-                <div id="Nugget"></div> 
-            </div>
-            <div id="player"></div>
+            <div class="nugget"></div> 
+            <div id="player" onclick="shoot()"></div>
+            <div id="shot"></div>
         </div>
         
         <script>
             var player = new Object();
             player.element = 'player';
-            player.x = window.innerWidth / 2;
+            player.x = (window.innerWidth / 2) - 25;
             player.y = window.innerHeight - 100;
 
-            function setPos(sprite) {
+            var shot = new Object();
+            shot.element = 'shot';
+            shot.x = (window.innerWidth / 2) - 10;
+            shot.y = window.innerHeight - 120;
+
+                        function setPosition(sprite) {
                 var e = document.getElementById(sprite.element);
                 e.style.left = sprite.x + 'px';
                 e.style.top = sprite.y + 'px';
             }
+            setPosition(player);
+            setPosition(shot);
 
-            setPos(player);
 
             function myMove() {
                 var elem = document.getElementById("Nugget");
