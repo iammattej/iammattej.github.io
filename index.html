@@ -66,20 +66,24 @@
 
 
             function Nugget() {
-                var elem = document.getElementById("Nugget");
+                for (var i = 0; i < nugget.length; i++) {
+                    var elem = nugget[i];
+                }
                 var posW = 0;
                 var posH = Math.floor((Math.random() * 340) + 50);
                 var check = 0;
                 var boxW = elem.clientWidth;
-                var stop = window.innerWidth - boxW;
-                var id = setInterval(frame, 3);
+                var stop = window.innerWidth;
+                var time = 1;
+                setInterval(frame, 5);
                 function frame() {
                     if (posW == stop) { check = 1; document.getElementById("check").innerHTML = check; }
                     else if (check == 0) { posW++; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
                     if (check == 1) { posW--; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
-                    if (posW == 0) { check = 0; }
+                    if (posW == 80) { check = 0; }
                 }
             }
+
             function shoot() {
                 var elem = document.getElementById("shot");
                 var pos = shot.y;
