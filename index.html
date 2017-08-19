@@ -80,6 +80,20 @@
                     if (posW == 0) { check = 0; }
                 }
             }
+            function shoot() {
+                var elem = document.getElementById("shot");
+                var pos = shot.y;
+                var id = setInterval(frame, 1);
+                function frame() {
+                    if (pos == 0) {
+                        clearInterval(id);
+                        elem.style.top = shot.y + 'px';
+                    } else {
+                        pos--;
+                        elem.style.top = pos + 'px';
+                    }
+                }
+
         </script>
     </body>
 </html>
