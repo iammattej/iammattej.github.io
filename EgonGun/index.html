@@ -5,97 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>EgonGun</title>
     </head>
-    <body onload="Nugget()">
-        <p>
-            <span id="check"></span>
-            <span id="posW"></span>
-            <span id="posH"></span>
-            <p id="demo"></p>
-        </p> 
-
-        <div id="container">
-            <div class="nugget"></div> 
-            <div id="player" onclick="shoot()"></div>
-            <div id="shot"></div>
-        </div>
-        
-        <script>
-            var player = new Object();
-            player.element = 'player';
-            player.x = (window.innerWidth / 2) - 25;
-            player.y = window.innerHeight - 100;
-
-            var shot = new Object();
-            shot.element = 'shot';
-            shot.x = (window.innerWidth / 2) - 10;
-            shot.y = window.innerHeight - 120;
-
-            var nugget = new Object();
-            nugget.element = 'nugget';
-            nugget.x = 100;
-            nugget.y = 0;
-
-            function intersects(a, b) {
-                return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
-            }
-            /*   function checkCollisions() {
-            for (var i = 0; i < nugget.length; i++) {
-            if (intersects(shot, nugget[i])) {
-            var element = document.getElementById(nugget[i].element);
-            element.style.visibility = 'hidden';
-            element.parentNode.removeChild(element);
-            enemies.splice(i, 1);
-            i--;
-            shot.y = -shot.h;
-            }
-            }
-            }*/
-
-            function setPosition(sprite) {
-                var e = document.getElementById(sprite.element);
-                e.style.left = sprite.x + 'px';
-                e.style.top = sprite.y + 'px';
-            }
-            setPosition(player);
-            setPosition(shot);
-            for (var i = 0; i < nugget.length; i++) {
-                setPosition(nugget[i]);
-            }
-
-            function Nugget() {
-                for (var i = 0; i < 1; i++) {
-                    var elem = document.getElementByClassName("check")[i];
-                }
-                var posW = 0;
-                var posH = Math.floor((Math.random() * 340) + 50);
-                var check = 0;
-                var boxW = elem.clientWidth;
-                var stop = window.innerWidth;
-                var time = 1;
-                setInterval(frame, 5);
-                function frame() {
-                    if (posW == stop) { check = 1; document.getElementById("check").innerHTML = check; }
-                    else if (check == 0) { posW++; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
-                    if (check == 1) { posW--; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
-                    if (posW == 80) { check = 0; }
-                }
-            }
-            function shoot() {
-                var elem = document.getElementById("shot");
-                var pos = shot.y;
-                var id = setInterval(frame, 1);
-                function frame() {
-                    if (pos == 0) {
-                        clearInterval(id);
-                        elem.style.top = shot.y + 'px';
-                    } else {
-                        pos--;
-                        elem.style.top = pos + 'px';
-                    }
-                }
-
-
-            }
-        </script>
+    <body>
+        <header><h1>EgonGun</h1></header>
+        <article>
+            <ul>
+                <li><a href="play.html">Spela</a></li>
+                <li><a href="characters.html">Byt Karaktär</a></li>
+                <li><a href="how.html">Instruktioner</a></li>
+            <ul>
+        </article>
     </body>
 </html>
