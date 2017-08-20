@@ -1,8 +1,5 @@
 <html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EgonGun</title>
 <style>
 #hero {
   width: 50px;
@@ -12,7 +9,8 @@
   z-index: 1;
 }
 #background {
-  background: #000000;
+  background: url("bilder/bg.png") no-repeat center fixed;
+  background-size:cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -83,37 +81,22 @@
         result.h = h;
         return result;
     }
-
     function intersects(a, b) { return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y; }
-
     function setPosition(sprite) {
         var e = document.getElementById(sprite.element);
         e.style.left = sprite.x + 'px';
         e.style.top = sprite.y + 'px';
     }
-
-
     function shoot() {
         if (laser.y <= laser.h * -1) {
             laser.x = hero.x + hero.w - 1;
             laser.y = hero.y;
         }
     }
-
-
-
-
     function addEnemy() {
         var rnd = getRandom(320) + 1;
         var EnemyRnd = rnd + 50;
         var side = -85;
-        /*var rnd1 = getRandom(2) + 1;
-        if (rnd1 == 1) {
-        side = -85;
-        }
-        else {
-        side = window.innerWidth;
-        }*/
         var elementName = 'enemy' + getRandom(10000000);
         var enemy = createSprite(elementName, side, EnemyRnd, 80, 80);
         var element = document.createElement('div');
@@ -165,9 +148,9 @@
 
     function updatePositions() {
         for (var i = 0; i < enemies.length; i++) {
-            var stop = window.innerWidth - 80;
+            var stop = window.innerWidth - 180;
             if (enemies[i].x === stop) { check = 1; }
-            if (enemies[i].x === 0 && check == 1) { check = 0; }
+            if (enemies[i].x === 180 && check == 1) { check = 0; }
             else if (check == 0) { enemies[i].x += 1; }
             if (check == 1) { enemies[i].x -= 1; }
         }
@@ -186,7 +169,7 @@
 
     function loop1() {
         updatePositions();
-        setTimeout('loop1();', 0.0001);
+        setTimeout('loop1();', 1 / 1000);
     }
 
     var hero = createSprite('hero', herox, 460, 20, 20);
