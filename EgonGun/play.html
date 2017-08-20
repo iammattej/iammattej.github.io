@@ -23,11 +23,9 @@
         function playAgain() {
             location.reload();
         }
-
         function getRandom(maxSize) {
             return parseInt(Math.random() * maxSize);
         }
-
         function createSprite(element, x, y, w, h) {
             var result = new Object();
             result.element = element;
@@ -52,16 +50,14 @@
         function addEnemy() {
             var rnd = getRandom(300) + 1;
             var EnemyRnd = rnd + 30;
-            var side = -85;
             var elementName = 'enemy' + getRandom(10000000);
-            var enemy = createSprite(elementName, side, EnemyRnd, 80, 80);
+            var enemy = createSprite(elementName, -85, EnemyRnd, 80, 80);
             var element = document.createElement('div');
             element.id = enemy.element;
             element.className = 'enemy';
             document.children[0].appendChild(element);
             enemies[enemies.length] = enemy;
         }
-
         function checkCollisions() {
             for (var i = 0; i < enemies.length; i++) {
                 if (intersects(laser, enemies[i])) {
@@ -78,7 +74,6 @@
                 }
             }
         }
-
         function gameOver() {
             var element = document.getElementById(hero.element);
             element.style.visibility = 'hidden';
@@ -89,7 +84,6 @@
                 element.style.visibility = 'hidden';
             }
         }
-
         function showSprites() {
             setPosition(hero);
             setPosition(laser);
@@ -99,9 +93,7 @@
             var scoreElement = document.getElementById('score');
             scoreElement.innerHTML = 'SCORE: ' + score;
         }
-
         var check = 0;
-
         function updatePositions() {
             for (var i = 0; i < enemies.length; i++) {
                 var stop = window.innerWidth - 90;
@@ -109,6 +101,7 @@
                 if (enemies[i].x === 5 && check == 1) { check = 0; }
                 else if (check == 0) { enemies[i].x += 1; }
                 if (check == 1) { enemies[i].x -= 1; }
+                document.getElementById('score').innerHTML = enemies[i].x;
             }
         }
         function loop() {
@@ -119,18 +112,15 @@
                 lastLoopRun = new Date().getTime();
                 iterations++;
             }
-            setTimeout('loop();', 2);
+            setTimeout('loop();', 1);
         }
-        addEnemy();
-
         function loop1() {
             updatePositions();
             setTimeout('loop1();', 2);
         }
-
         var hero = createSprite('hero', herox, 460, 20, 20);
         var laser = createSprite('laser', 0, -120, 2, 50);
-
+        addEnemy();
         loop();
         loop1();
 
