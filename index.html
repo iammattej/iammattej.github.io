@@ -1,103 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EgonGun</title>
-        <style>
-            body {
-              background: yellow;
-              margin: 0;
-            }
-            .nugget {
-              width: 80px;
-              height: 50px;
-              position: absolute;
-              background-color: red;
-            }
-            #player {
-              width: 50px;
-              height: 80px;
-              position: absolute;
-              background-color: red;
-            }
-            #shot {
-                width: 20px;
-                height: 20px;
-                border-radius: 10px;
-                background-color: blue;
-                position: absolute;
-                visibility: visible;
-            }
-        </style>
-    </head>
-    <body onload="Nugget()">
-        <p>
-            <span id="check"></span>
-            <span id="posW"></span>
-            <span id="posH"></span>
-            <p id="demo"></p>
-        </p> 
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EgonGun</title>
+<style>
+#hero {
+  width: 50px;
+  height: 80px;
+  position: absolute;
+  background-color: red;
+  z-index: 1;
+}
+#background {
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#laser {
+  background: #00ff00;
+  width: 2px;
+  height: 50px;
+  position: absolute;
+}
+.enemy {
+  background: #0000ff;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+#score {
+  color: #ffffff;
+  font-size: 18pt;
+  position: absolute;
+  text-align: center;
+  width: 99%;
+}
+#gameover {
+  color: #ff0000;
+  font-size: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  text-align: center;
+  visibility: hidden;
+}
+#gameover span {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+<div id="background"></div>
+<div id="hero" onclick="shoot()"></div>
+<div id="laser"></div>
+<div id="score"></div>
+<div id="gameover">GAME OVER<br><span onclick="playAgain()">Play Again</span></div>
+<script>
+    var lastLoopRun = 0;
+    var score = 0;
+    var iterations = 0;
+    var herox = (window.innerWidth / 2) - 25;
+    var enemies = new Array();
 
-        <div id="container">
-            <div class="nugget"></div> 
-            <div id="player" onclick="shoot()"></div>
-            <div id="shot"></div>
-        </div>
-        
-        <script>
-            var player = new Object();
-            player.element = 'player';
-            player.x = (window.innerWidth / 2) - 25;
-            player.y = window.innerHeight - 100;
+    function playAgain() {
+        location.reload();
+    }
 
-            var shot = new Object();
-            shot.element = 'shot';
-            shot.x = (window.innerWidth / 2) - 10;
-            shot.y = window.innerHeight - 120;
+    function getRandom(maxSize) {
+        return parseInt(Math.random() * maxSize);
+    }
 
-                        function setPosition(sprite) {
-                var e = document.getElementById(sprite.element);
-                e.style.left = sprite.x + 'px';
-                e.style.top = sprite.y + 'px';
+    function createSprite(element, x, y, w, h) {
+        var result = new Object();
+        result.element = element;
+        result.x = x;
+        result.y = y;
+        result.w = w;
+        result.h = h;
+        return result;
+    }
+
+    function intersects(a, b) { return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y; }
+
+    function setPosition(sprite) {
+        var e = document.getElementById(sprite.element);
+        e.style.left = sprite.x + 'px';
+        e.style.top = sprite.y + 'px';
+    }
+
+
+    function shoot() {
+        if (laser.y <= laser.h * -1) {
+            laser.x = hero.x + hero.w - 1;
+            laser.y = hero.y;
+        }
+    }
+
+
+
+
+    function addEnemy() {
+        var rnd = getRandom(320) + 1;
+        var EnemyRnd = rnd + 50;
+        var side = -85;
+        /*var rnd1 = getRandom(2) + 1;
+        if (rnd1 == 1) {
+        side = -85;
+        }
+        else {
+        side = window.innerWidth;
+        }*/
+        var elementName = 'enemy' + getRandom(10000000);
+        var enemy = createSprite(elementName, side, EnemyRnd, 80, 80);
+        var element = document.createElement('div');
+        element.id = enemy.element;
+        element.className = 'enemy';
+        document.children[0].appendChild(element);
+        enemies[enemies.length] = enemy;
+    }
+
+    function checkCollisions() {
+        for (var i = 0; i < enemies.length; i++) {
+            if (intersects(laser, enemies[i])) {
+                var element = document.getElementById(enemies[i].element);
+                element.style.visibility = 'hidden';
+                element.parentNode.removeChild(element);
+                enemies.splice(i, 1);
+                i--;
+                laser.y = -120;
+                score += 1;
+                addEnemy();
+            } else if (laser.y <= -laser.h && laser.y > -110) {
+                gameOver();
             }
-            setPosition(player);
-            setPosition(shot);
+        }
+    }
 
+    function gameOver() {
+        var element = document.getElementById(hero.element);
+        element.style.visibility = 'hidden';
+        element = document.getElementById('gameover');
+        element.style.visibility = 'visible';
+        for (var i = 0; i < enemies.length; i++) {
+            element = document.getElementById(enemies[i].element);
+            element.style.visibility = 'hidden';
+        }
+    }
 
-            function Nugget() {
-                for (var i = 0; i < nugget.length; i++) {
-                    var elem = nugget[i];
-                }
-                var posW = 0;
-                var posH = Math.floor((Math.random() * 340) + 50);
-                var check = 0;
-                var boxW = elem.clientWidth;
-                var stop = window.innerWidth;
-                var time = 1;
-                setInterval(frame, 5);
-                function frame() {
-                    if (posW == stop) { check = 1; document.getElementById("check").innerHTML = check; }
-                    else if (check == 0) { posW++; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
-                    if (check == 1) { posW--; elem.style.left = posW + 'px'; elem.style.top = posH + 'px'; document.getElementById("posW").innerHTML = posW; document.getElementById("posH").innerHTML = posH; }
-                    if (posW == 80) { check = 0; }
-                }
-            }
+    function showSprites() {
+        setPosition(hero);
+        setPosition(laser);
+        for (var i = 0; i < enemies.length; i++) {
+            setPosition(enemies[i]);
+        }
+        var scoreElement = document.getElementById('score');
+        scoreElement.innerHTML = 'SCORE: ' + score;
+    }
 
-            function shoot() {
-                var elem = document.getElementById("shot");
-                var pos = shot.y;
-                var id = setInterval(frame, 1);
-                function frame() {
-                    if (pos == 0) {
-                        clearInterval(id);
-                        elem.style.top = shot.y + 'px';
-                    } else {
-                        pos--;
-                        elem.style.top = pos + 'px';
-                    }
-                }
-            }
-        </script>
-    </body>
+    var check = 0;
+
+    function updatePositions() {
+        for (var i = 0; i < enemies.length; i++) {
+            var stop = window.innerWidth - 80;
+            if (enemies[i].x === stop) { check = 1; }
+            if (enemies[i].x === 0 && check == 1) { check = 0; }
+            else if (check == 0) { enemies[i].x += 1; }
+            if (check == 1) { enemies[i].x -= 1; }
+        }
+    }
+    function loop() {
+        if (new Date().getTime() - lastLoopRun > 40) {
+            checkCollisions();
+            laser.y -= 12;
+            showSprites();
+            lastLoopRun = new Date().getTime();
+            iterations++;
+        }
+        setTimeout('loop();', 2);
+    }
+    addEnemy();
+
+    function loop1() {
+        updatePositions();
+        setTimeout('loop1();', 0.0001);
+    }
+
+    var hero = createSprite('hero', herox, 460, 20, 20);
+    var laser = createSprite('laser', 0, -120, 2, 50);
+
+    loop();
+    loop1();
+
+</script>
+</body>
 </html>
