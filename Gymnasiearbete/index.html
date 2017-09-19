@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <title>Gymnasiearbete</title>
+        <link href="StyleSheet.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="storbox" class="indexpage">
+            <header>
+                <h1>Gymnasiearbete</h1>
+            </header>
+            <article>
+                <form name='loginform' action='' method='post' id='LogIn' style='height: 100%'>
+                        <table id='tbllogin'>
+                            <tr>
+                                <td>
+                                    <input type='text' name='em' placeholder='E-post' onfocus='this.placeholder = ''' onblur='this.placeholder='E-post''>
+                                    <input type='password' name='pword' placeholder='Lösenord' onfocus='this.placeholder = ''' onblur='this.placeholder='Lösenord''>
+                                    <input type='submit' value='Logga in' class='button' id='Login' name='loginbtn'/>
+                                    <input type='submit' value='Registera dig här' class='button' id='Reg' name='regbtn'/>                                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a id='ForgotPassword' href='recoveraccount.php'>Glömt ditt lösenord?</a>                    
+                                </td>
+                            </tr>   
+                        </table>
+                    </form>
+                <input class="iptftr" type="submit" value="Har du några frågor? Klicka här!" name="questions" onClick="window.location.href='questions.php'"></input>           
+            </article>                
+        </div>
+    </body>
+</html>
