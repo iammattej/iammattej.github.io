@@ -1,14 +1,3 @@
-<?php
-    error_reporting (E_ALL ^ E_NOTICE ^ E_DEPRECATED); 
-    
-    session_start();
-    $id = $_SESSION['id'];
-    $username = $_SESSION['username'];
-    if (isset($_SESSION['username'])){
-        header('Location: main_en.php');
-    }
-
-?>
 <!DOCTYPE html>
 <html lang="sv">
     <head>
@@ -65,7 +54,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="button" value="Tillbaka" onClick="window.location.href='index.php'" style="margin-top: 5%;">
+                                <input type="button" value="Tillbaka" onClick="window.location.href='index.html'" style="margin-top: 5%;">
                             </td>
                         </tr>
                     </table>
